@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ImmoBoost AI – Immobilienmarketing in 60 Sekunden</title>
+  <meta name="description" content="Erstelle Exposés, ImmoScout-Texte, Instagram-Posts und Kundenmails automatisch aus wenigen Objektdaten – direkt im Browser." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════════ -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__icon">◆</span>
+        <span class="logo__text">ImmoBoost <em>AI</em></span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="#features" class="nav__link">Funktionen</a>
+        <a href="#demo" class="nav__link">Demo</a>
+        <a href="#preise" class="nav__link">Preise</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </nav>
+      <a href="#demo" class="btn btn--outline header__cta">Demo testen</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="mobileNavClose">✕</button>
+    <a href="#features" class="mobile-nav__link">Funktionen</a>
+    <a href="#demo" class="mobile-nav__link">Demo</a>
+    <a href="#preise" class="mobile-nav__link">Preise</a>
+    <a href="#faq" class="mobile-nav__link">FAQ</a>
+    <a href="#demo" class="btn btn--primary mobile-nav__cta">Demo testen</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-orbs">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="badge__dot"></span>
+            KI-gestütztes Immobilienmarketing
+          </div>
+          <h1 class="hero__headline">
+            Immobilienmarketing<br />
+            in <span class="highlight">60 Sekunden</span><br />
+            statt 2 Stunden.
+          </h1>
+          <p class="hero__sub">
+            Erstelle Exposés, ImmoScout-Texte, Instagram-Posts und Kundenmails
+            aus wenigen Objektdaten – direkt im Browser. Kein Login. Kein Abo.
+            Jetzt testen.
+          </p>
+          <div class="hero__actions">
+            <a href="#demo" class="btn btn--primary btn--lg">
+              <span>Kostenlos testen</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#preise" class="btn btn--ghost btn--lg">Preise ansehen</a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <strong>500+</strong>
+              <span>Makler aktiv</span>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat">
+              <strong>12.000+</strong>
+              <span>Texte generiert</span>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat">
+              <strong>4.9 ★</strong>
+              <span>Bewertung</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__preview">
+          <div class="preview-card">
+            <div class="preview-card__header">
+              <div class="preview-card__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="preview-card__title">ImmoBoost AI</span>
+            </div>
+            <div class="preview-card__body">
+              <div class="preview-field">
+                <label>Objektart</label>
+                <div class="preview-field__value">Villa · München · 2.400.000 €</div>
+              </div>
+              <div class="preview-field">
+                <label>Tonalität</label>
+                <div class="preview-field__value preview-field__value--tag">Premium ✦</div>
+              </div>
+              <div class="preview-generating">
+                <div class="generating__bar">
+                  <div class="generating__bar-inner"></div>
+                </div>
+                <span>Texte werden generiert …</span>
+              </div>
+              <div class="preview-result">
+                <div class="preview-result__label">Exposé</div>
+                <p class="preview-result__text">
+                  „Diese exklusive Villa in München besticht durch großzügige Räume, edle Materialien und ein einzigartiges Ambiente …"
+                </p>
+              </div>
+              <div class="preview-tabs">
+                <span class="tab tab--active">Exposé</span>
+                <span class="tab">ImmoScout</span>
+                <span class="tab">Instagram</span>
+                <span class="tab">E-Mail</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         PROBLEM / SOLUTION
+    ═══════════════════════════════════════════════════ -->
+    <section class="problem" id="problem">
+      <div class="container">
+        <div class="problem__grid">
+          <div class="problem__col problem__col--before">
+            <div class="problem__label problem__label--red">⚠ Vorher</div>
+            <h3>Der Alltag ohne ImmoBoost AI</h3>
+            <ul class="problem__list">
+              <li>
+                <span class="icon-bad">✕</span>
+                2–3 Stunden pro Objekt für Exposé und Anzeigen
+              </li>
+              <li>
+                <span class="icon-bad">✕</span>
+                Immer wieder dieselben Textbausteine zusammenkopieren
+              </li>
+              <li>
+                <span class="icon-bad">✕</span>
+                Verschiedene Versionen für verschiedene Plattformen
+              </li>
+              <li>
+                <span class="icon-bad">✕</span>
+                Kundenmails und WhatsApp-Nachrichten manuell formulieren
+              </li>
+              <li>
+                <span class="icon-bad">✕</span>
+                Wertvolle Zeit, die für echte Kundenpflege fehlt
+              </li>
+            </ul>
+          </div>
+          <div class="problem__divider">
+            <div class="problem__arrow">→</div>
+          </div>
+          <div class="problem__col problem__col--after">
+            <div class="problem__label problem__label--green">✓ Nachher</div>
+            <h3>Mit ImmoBoost AI</h3>
+            <ul class="problem__list">
+              <li>
+                <span class="icon-good">✓</span>
+                Alle Texte in unter 60 Sekunden erstellt
+              </li>
+              <li>
+                <span class="icon-good">✓</span>
+                Individuelle Texte aus echten Objektdaten
+              </li>
+              <li>
+                <span class="icon-good">✓</span>
+                Automatisch für alle Kanäle optimiert
+              </li>
+              <li>
+                <span class="icon-good">✓</span>
+                Professionelle Tonalität auf Knopfdruck
+              </li>
+              <li>
+                <span class="icon-good">✓</span>
+                Mehr Zeit für das Wesentliche – Ihre Kunden
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FEATURES
+    ═══════════════════════════════════════════════════ -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Funktionen</div>
+          <h2>Alles, was Makler brauchen</h2>
+          <p>Sechs leistungsstarke Module für professionelles Immobilienmarketing.</p>
+        </div>
+        <div class="features__grid">
+
+          <div class="feature-card feature-card--highlight">
+            <div class="feature-card__icon">📄</div>
+            <h3>Exposé Generator</h3>
+            <p>Erstellt aus wenigen Eckdaten ein vollständiges, professionelles Exposé in Ihrer gewünschten Tonalität – bereit zum Versand.</p>
+            <div class="feature-card__tag">Beliebteste Funktion</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">🏠</div>
+            <h3>ImmoScout Text</h3>
+            <p>Perfekt formatierte Anzeigentexte für ImmoScout24, Immowelt und weitere Portale – inklusive aller relevanten Angaben.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">📸</div>
+            <h3>Instagram Caption</h3>
+            <p>Reichweitenstarke Captions mit Hashtags für Social Media – abgestimmt auf Ihre Zielgruppe und das Objekt.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">✉️</div>
+            <h3>Kunden-E-Mail</h3>
+            <p>Persönliche, professionelle E-Mails an Interessenten – mit allen wichtigen Informationen zum Objekt vorformuliert.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">💬</div>
+            <h3>WhatsApp Nachricht</h3>
+            <p>Kurze, wirkungsvolle WhatsApp-Nachrichten für die direkte Kundenkommunikation – informell und überzeugend.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">✦</div>
+            <h3>Premium Tonalität</h3>
+            <p>Wählen Sie zwischen sachlich, emotional, modern oder Premium – die KI passt Stil und Sprache automatisch an.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         DEMO
+    ═══════════════════════════════════════════════════ -->
+    <section class="demo-section" id="demo">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Live-Demo</div>
+          <h2>Jetzt selbst ausprobieren</h2>
+          <p>Tragen Sie Ihre Objektdaten ein und erleben Sie, wie ImmoBoost AI innerhalb von Sekunden professionelle Marketingtexte erstellt.</p>
+        </div>
+
+        <div class="demo__layout">
+          <!-- FORM -->
+          <div class="demo__form-wrap">
+            <form class="demo__form" id="demoForm" novalidate>
+              <h3 class="form__title">Objektdaten eingeben</h3>
+
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="objektart">Objektart *</label>
+                  <select id="objektart" name="objektart" required>
+                    <option value="">Bitte wählen …</option>
+                    <option value="Wohnung">Wohnung</option>
+                    <option value="Haus">Haus</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Grundstück">Grundstück</option>
+                  </select>
+                  <span class="form__error" id="err-objektart"></span>
+                </div>
+                <div class="form__group">
+                  <label for="stadt">Stadt *</label>
+                  <input type="text" id="stadt" name="stadt" placeholder="z. B. München" required />
+                  <span class="form__error" id="err-stadt"></span>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="preis">Kaufpreis (€) *</label>
+                  <input type="text" id="preis" name="preis" placeholder="z. B. 850.000" required />
+                  <span class="form__error" id="err-preis"></span>
+                </div>
+                <div class="form__group">
+                  <label for="flaeche">Wohnfläche (m²) *</label>
+                  <input type="text" id="flaeche" name="flaeche" placeholder="z. B. 120" required />
+                  <span class="form__error" id="err-flaeche"></span>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="zimmer">Zimmer *</label>
+                  <input type="text" id="zimmer" name="zimmer" placeholder="z. B. 4" required />
+                  <span class="form__error" id="err-zimmer"></span>
+                </div>
+                <div class="form__group">
+                  <label for="zielgruppe">Zielgruppe *</label>
+                  <select id="zielgruppe" name="zielgruppe" required>
+                    <option value="">Bitte wählen …</option>
+                    <option value="Familie">Familie</option>
+                    <option value="Investor">Investor</option>
+                    <option value="Paar">Paar</option>
+                    <option value="Luxus-Käufer">Luxus-Käufer</option>
+                  </select>
+                  <span class="form__error" id="err-zielgruppe"></span>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label for="besonderheiten">Besonderheiten</label>
+                <textarea id="besonderheiten" name="besonderheiten" rows="3" placeholder="z. B. Dachterrasse, Tiefgarage, Erstbezug, Panoramablick …"></textarea>
+              </div>
+
+              <div class="form__group">
+                <label for="tonalitaet">Tonalität *</label>
+                <select id="tonalitaet" name="tonalitaet" required>
+                  <option value="">Bitte wählen …</option>
+                  <option value="Premium">Premium</option>
+                  <option value="emotional">Emotional</option>
+                  <option value="sachlich">Sachlich</option>
+                  <option value="modern">Modern</option>
+                </select>
+                <span class="form__error" id="err-tonalitaet"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full btn--lg" id="generateBtn">
+                <span id="btnText">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:inline;vertical-align:-3px;margin-right:6px"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                  Marketingtexte generieren
+                </span>
+                <span id="btnLoading" style="display:none">⟳ Generiere Texte …</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="demo__results" id="demoResults" style="display:none">
+          <div class="results__header">
+            <h3>✦ Ihre generierten Marketingtexte</h3>
+            <button class="btn btn--outline" id="copyAllBtn">
+              📋 Alle Texte kopieren
+            </button>
+          </div>
+
+          <div class="results__tabs" role="tablist">
+            <button class="results__tab results__tab--active" data-tab="expose" role="tab">Exposé</button>
+            <button class="results__tab" data-tab="immo" role="tab">ImmoScout</button>
+            <button class="results__tab" data-tab="instagram" role="tab">Instagram</button>
+            <button class="results__tab" data-tab="email" role="tab">E-Mail</button>
+            <button class="results__tab" data-tab="whatsapp" role="tab">WhatsApp</button>
+          </div>
+
+          <div class="results__panels">
+
+            <div class="results__panel results__panel--active" id="panel-expose">
+              <div class="panel__top">
+                <span class="panel__label">📄 Exposé-Text</span>
+                <button class="btn btn--copy" data-target="text-expose">📋 Kopieren</button>
+              </div>
+              <div class="panel__content" id="text-expose"></div>
+            </div>
+
+            <div class="results__panel" id="panel-immo">
+              <div class="panel__top">
+                <span class="panel__label">🏠 ImmoScout-Anzeige</span>
+                <button class="btn btn--copy" data-target="text-immo">📋 Kopieren</button>
+              </div>
+              <div class="panel__content" id="text-immo"></div>
+            </div>
+
+            <div class="results__panel" id="panel-instagram">
+              <div class="panel__top">
+                <span class="panel__label">📸 Instagram Caption</span>
+                <button class="btn btn--copy" data-target="text-instagram">📋 Kopieren</button>
+              </div>
+              <div class="panel__content" id="text-instagram"></div>
+            </div>
+
+            <div class="results__panel" id="panel-email">
+              <div class="panel__top">
+                <span class="panel__label">✉️ E-Mail an Interessenten</span>
+                <button class="btn btn--copy" data-target="text-email">📋 Kopieren</button>
+              </div>
+              <div class="panel__content" id="text-email"></div>
+            </div>
+
+            <div class="results__panel" id="panel-whatsapp">
+              <div class="panel__top">
+                <span class="panel__label">💬 WhatsApp Nachricht</span>
+                <button class="btn btn--copy" data-target="text-whatsapp">📋 Kopieren</button>
+              </div>
+              <div class="panel__content" id="text-whatsapp"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         PREISE
+    ═══════════════════════════════════════════════════ -->
+    <section class="pricing" id="preise">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Preise</div>
+          <h2>Transparent. Kalkulierbar.</h2>
+          <p>Wählen Sie das Paket, das zu Ihrem Büro passt. Keine versteckten Kosten.</p>
+        </div>
+        <div class="pricing__grid">
+
+          <div class="pricing-card">
+            <div class="pricing-card__tier">Starter</div>
+            <div class="pricing-card__price">
+              <span class="price__amount">29 €</span>
+              <span class="price__period">/Monat</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li>✓ 50 Texte pro Monat</li>
+              <li>✓ Exposé & ImmoScout</li>
+              <li>✓ E-Mail Generator</li>
+              <li>✓ 1 Nutzer</li>
+              <li class="disabled">✕ Instagram & WhatsApp</li>
+              <li class="disabled">✕ Premium Tonalität</li>
+            </ul>
+            <button class="btn btn--outline btn--full" onclick="openModal('Starter')">Jetzt starten</button>
+          </div>
+
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-card__badge">Empfohlen</div>
+            <div class="pricing-card__tier">Pro</div>
+            <div class="pricing-card__price">
+              <span class="price__amount">79 €</span>
+              <span class="price__period">/Monat</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li>✓ Unbegrenzte Texte</li>
+              <li>✓ Alle 5 Textformate</li>
+              <li>✓ Premium Tonalität</li>
+              <li>✓ 3 Nutzer</li>
+              <li>✓ Exportfunktionen</li>
+              <li class="disabled">✕ White-Label</li>
+            </ul>
+            <button class="btn btn--primary btn--full" onclick="openModal('Pro')">Jetzt starten</button>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-card__tier">Agency</div>
+            <div class="pricing-card__price">
+              <span class="price__amount">149 €</span>
+              <span class="price__period">/Monat</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li>✓ Unbegrenzte Texte</li>
+              <li>✓ Alle 5 Textformate</li>
+              <li>✓ Alle Tonalitäten</li>
+              <li>✓ Unbegrenzte Nutzer</li>
+              <li>✓ White-Label Option</li>
+              <li>✓ API-Zugang</li>
+            </ul>
+            <button class="btn btn--outline btn--full" onclick="openModal('Agency')">Jetzt starten</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FAQ
+    ═══════════════════════════════════════════════════ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">FAQ</div>
+          <h2>Häufige Fragen</h2>
+        </div>
+        <div class="faq__list">
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Funktioniert das ohne Installation?
+              <span class="faq__arrow">▾</span>
+            </button>
+            <div class="faq__answer">
+              <p>Ja, vollständig. ImmoBoost AI läuft direkt im Browser – kein Download, keine Installation, kein Plugin. Sie öffnen die Website und können sofort loslegen.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Für wen ist ImmoBoost AI gedacht?
+              <span class="faq__arrow">▾</span>
+            </button>
+            <div class="faq__answer">
+              <p>ImmoBoost AI richtet sich an Immobilienmakler, Maklerbüros und Immobilienprofis in Deutschland, die ihr Marketing effizienter gestalten möchten. Das Tool eignet sich sowohl für Einzelkämpfer als auch für Teams und große Agenturen.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Kann ich die generierten Texte bearbeiten?
+              <span class="faq__arrow">▾</span>
+            </button>
+            <div class="faq__answer">
+              <p>Selbstverständlich. Die generierten Texte sind als professionelle Grundlage gedacht, die Sie jederzeit an Ihre eigene Sprache, spezifische Details oder rechtliche Anforderungen anpassen können. Alle Texte können direkt kopiert und in Ihre Tools übertragen werden.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Gibt es eine kostenlose Demo?
+              <span class="faq__arrow">▾</span>
+            </button>
+            <div class="faq__answer">
+              <p>Ja! Die vollständige interaktive Demo auf dieser Seite ist kostenlos und ohne Registrierung nutzbar. Geben Sie einfach Ihre Objektdaten ein und testen Sie alle fünf Textformate live. Kein Kreditkarte erforderlich.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Ist das schon eine echte KI?
+              <span class="faq__arrow">▾</span>
+            </button>
+            <div class="faq__answer">
+              <p>Diese Demo zeigt den vollständigen Workflow von ImmoBoost AI: Eingabe → automatische Texterstellung → direkte Nutzung. Die Texte werden aus Ihren konkreten Eingaben zusammengesetzt und sind keine generischen Platzhalter. In der Vollversion kann eine echte KI-API (z. B. GPT-4 oder Claude) angebunden werden, um die Texte noch individueller, nuancierter und sprachlich noch hochwertiger zu machen. Die Qualität steigt dann nochmals erheblich.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="logo">
+          <span class="logo__icon">◆</span>
+          <span class="logo__text">ImmoBoost <em>AI</em></span>
+        </a>
+        <p class="footer__claim">Professionelles Immobilienmarketing. Automatisch.</p>
+      </div>
+      <div class="footer__links">
+        <button class="footer__link" onclick="openLegal('impressum')">Impressum</button>
+        <button class="footer__link" onclick="openLegal('datenschutz')">Datenschutz</button>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 ImmoBoost AI · Alle Rechte vorbehalten</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════
+       MODAL: KONTAKT
+  ═══════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="contactModal" aria-hidden="true">
+    <div class="modal">
+      <button class="modal__close" id="modalClose" aria-label="Schließen">✕</button>
+      <div class="modal__icon">✦</div>
+      <h2 class="modal__title">Paket anfragen</h2>
+      <p class="modal__subtitle" id="modalSubtitle">Wählen Sie das passende Paket für Ihr Maklerbüro.</p>
+
+      <form class="modal__form" id="contactForm" novalidate>
+        <input type="hidden" id="selectedPlan" value="" />
+
+        <div class="form__group">
+          <label for="contactName">Ihr Name *</label>
+          <input type="text" id="contactName" placeholder="Max Mustermann" required />
+          <span class="form__error" id="err-contactName"></span>
+        </div>
+        <div class="form__group">
+          <label for="contactEmail">E-Mail-Adresse *</label>
+          <input type="email" id="contactEmail" placeholder="max@maklerbuero.de" required />
+          <span class="form__error" id="err-contactEmail"></span>
+        </div>
+        <div class="form__group">
+          <label for="contactCompany">Unternehmen</label>
+          <input type="text" id="contactCompany" placeholder="Mustermann Immobilien GmbH" />
+        </div>
+        <div class="form__group">
+          <label for="contactMessage">Nachricht</label>
+          <textarea id="contactMessage" rows="3" placeholder="Ich interessiere mich für …"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full">
+          Anfrage vorbereiten &amp; senden
+        </button>
+      </form>
+
+      <div class="modal__success" id="modalSuccess" style="display:none">
+        <div class="success__icon">✓</div>
+        <h3>Anfrage wird vorbereitet!</h3>
+        <p>Ihr E-Mail-Programm öffnet sich gleich mit Ihrer vorausgefüllten Anfrage. Bitte senden Sie die E-Mail ab.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       MODAL: LEGAL
+  ═══════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="legalModal" aria-hidden="true">
+    <div class="modal modal--legal">
+      <button class="modal__close" id="legalModalClose" aria-label="Schließen">✕</button>
+      <h2 class="modal__title" id="legalTitle"></h2>
+      <div class="modal__legal-content" id="legalContent"></div>
+      <div class="modal__legal-notice">
+        ⚠️ <strong>Hinweis:</strong> Dieser Text ist ein Platzhalter. Bitte vor der Veröffentlichung rechtlich prüfen lassen.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
